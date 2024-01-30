@@ -1,0 +1,39 @@
+use std::io;
+
+fn main() {
+    println!("Enter a temperature in fahrenheit you would like to convert to celsius!");
+
+    //loop {
+        //println!("Please input your desired fahrenheit.");
+
+        let mut fahrenheit = String::new();
+
+        io::stdin()
+            .read_line(&mut fahrenheit)
+            .expect("Failed to read line");
+
+        let fahrenheit: i32 = fahrenheit.trim().parse().expect("Please enter a number.");
+        //{
+            //Ok(num) => num,
+            //Err(_) => continue,
+        //};
+
+        println!("Your input was: {fahrenheit}");
+
+        let celsius = ( fahrenheit - 32 ) * 5 / 9;
+
+        println!("{fahrenheit} degrees fahrenheit is {celsius} degrees celsius.");
+        //break;
+
+        //println!("Would you like to exit? Type 1 for yes, anything else for no.");
+        //let mut exit = String::new();
+        //io::stdin()
+        //    .read_line(&mut exit)
+        //    .expect("Failed to read line");
+        //et exit: i32 = match exit.trim().parse() {
+        //Ok(num) => num,
+        //Err(_) => continue,
+        //};
+        //if exit == 1 { break }
+    //}
+}
